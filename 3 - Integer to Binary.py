@@ -22,5 +22,5 @@ while num > 0:
 
 if isNeg:
     result = '-' + result
-    
+
 print('The binary representation is ' + result)

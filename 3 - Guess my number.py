@@ -1,3 +1,10 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Jun  1 11:05:48 2018
+
+@author: nas7ybruises
+"""
+
 low = 0
 high = 100
 ans = (low+high)//2
