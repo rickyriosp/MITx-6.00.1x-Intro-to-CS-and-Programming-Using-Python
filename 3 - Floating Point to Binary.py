@@ -5,7 +5,7 @@ Created on Fri Jun  1 10:58:22 2018
 @author: nas7ybruises
 """
 
-x = float(input('Enter a dcimal number between 0 and 1: '))
+x = float(input('Enter a decimal number between 0 and 1: '))
 
 p = 0
 while ((2**p)*x)%1 != 0:
