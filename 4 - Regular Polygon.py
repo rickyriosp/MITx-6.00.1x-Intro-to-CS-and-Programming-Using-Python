@@ -14,6 +14,6 @@ def polysum(n, s):
     the regular polygon. 
     The function returns the sum, rounded to 4 decimal places.
     '''
-    ans = (n*s)**2      # Square of perimeter
-    ans += (0.25*n*s**2)/tan(pi/n)
+    ans = (n*s)**2                  # Square of perimeter
+    ans += (0.25*n*s**2)/tan(pi/n)  # Add area
     return round(ans, 4)
