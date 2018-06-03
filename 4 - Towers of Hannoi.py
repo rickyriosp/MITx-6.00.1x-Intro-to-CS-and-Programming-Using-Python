@@ -16,4 +16,4 @@ def Towers(n, fr, to, spare):
         Towers(1, fr, to, spare)
         Towers(n-1, spare, to, fr)
 
-print(Towers(4, 'P1', 'P2', 'Spare'))
+print(Towers(3, 'P1', 'P2', 'Spare'))
