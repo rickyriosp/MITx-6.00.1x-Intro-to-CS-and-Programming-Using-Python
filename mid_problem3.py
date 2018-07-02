@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Jul  2 11:04:28 2018
+
+@author: nas7ybruises
+"""
+
+def evalQuadratic(a, b, c, x):
+   '''
+   a, b, c: numerical values for the coefficients of a quadratic equation
+   x: numerical value at which to evaluate the quadratic.
+   '''
+   return a*x*x + b*x + c
+
+def twoQuadratics(a1, b1, c1, x1, a2, b2, c2, x2):
+    '''
+    a1, b1, c1: one set of coefficients of a quadratic equation
+    a2, b2, c2: another set of coefficients of a quadratic equation
+    x1, x2: values at which to evaluate the quadratics
+    '''
+    print(evalQuadratic(a1,b1,c1,x1) + evalQuadratic(a2,b2,c2,x2))
+
+twoQuadratics(a1 = 0.79, b1 = 9.84, c1 = 5.17, x1 = -9.78, a2 = -1.19, b2 = -1.55, c2 = 6.48, x2 = -7.97)
