@@ -99,7 +99,7 @@ def displayHand(hand):
     for letter in hand.keys():
         for j in range(hand[letter]):
              print(letter,end=" ")       # print all on the same line
-    print()                             # print an empty line
+    #print()                             # print an empty line
 
 #
 # Problem #2: Make sure you understand how this function works and what it does!
@@ -217,6 +217,27 @@ def playHand(hand, wordList, n):
       n: integer (HAND_SIZE; i.e., hand size required for additional points)
       
     """
+    total = 0
+    while True:
+        print('Current Hand: ', end=" ")
+        displayHand(hand)
+        word = str(input('Enter word, or a "." to indicate that you are finished: '))
+        if word == '.':
+            print('Goodbye! Total score: ' + str(total) + ' points.')
+            return
+        elif not isValidWord(word, hand, wordList):
+            print('Invalid word, please try again.')
+            print()
+        else:
+            score = getWordScore(word, n)
+            total += score
+            print('"' + word + '" earned ' + str(score) + ' points. Total: ' \
+                  + str(total) + ' points')
+            print()
+            hand = updateHand(hand, word)
+            if calculateHandlen(hand) <= 0:
+                print('Run out of letters. Total score: ' + str(total) + ' points.')
+                return
     # BEGIN PSEUDOCODE <-- Remove this comment when you code this function; do your coding within the pseudocode (leaving those comments in-place!)
     # Keep track of the total score
     
@@ -275,3 +296,5 @@ def playGame(wordList):
 if __name__ == '__main__':
     wordList = loadWords()
     playGame(wordList)
+
+playHand({'n':1, 'e':1, 't':1, 'a':1, 'r':1, 'i':2}, wordList, 7)
