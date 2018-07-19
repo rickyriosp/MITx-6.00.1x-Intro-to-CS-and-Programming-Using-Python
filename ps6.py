@@ -234,6 +234,11 @@ class CiphertextMessage(Message):
                 shift = i
         return (shift, self.apply_shift(shift))
 
+def decrypt_story():
+    story_string = get_story_string()
+    text = CiphertextMessage(story_string)
+    return text.decrypt_message()
+
 
 #Example test case (PlaintextMessage)
 plaintext = PlaintextMessage('hello', 2)
