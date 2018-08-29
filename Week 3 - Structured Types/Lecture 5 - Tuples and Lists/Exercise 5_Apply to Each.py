@@ -1,0 +1,1 @@
+applyToEach(testList, abs)
